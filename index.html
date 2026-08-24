@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#f3ede2">
+<meta name="theme-color" content="#101010">
 <meta name="description" content="Irreverent Works — peculiar paperwork, ceremonial nonsense, and goods of dubious spiritual and practical value.">
 <title>Irreverent Works</title>
 
@@ -11,25 +11,25 @@
 
 <style>
 :root {
-  --paper:#f3ede2;
-  --cream:#fbf8f1;
-  --ink:#211c18;
-  --muted:#6d6258;
-  --line:#cbbba6;
-  --gold:#9b752c;
-  --red:#7d211f;
-  --shadow:rgba(67,48,27,.14);
+  --bg:#101010;
+  --panel:#1d1b18;
+  --panel2:#24211d;
+  --text:#f3eee5;
+  --muted:#b9afa4;
+  --line:#3a342d;
+  --gold:#b58a35;
+  --red:#b44942;
 }
 
 * { box-sizing:border-box; }
 html { -webkit-text-size-adjust:100%; }
 body {
   margin:0;
-  color:var(--ink);
-  font-family:Georgia, "Times New Roman", serif;
   background:
-    linear-gradient(rgba(255,255,255,.38),rgba(255,255,255,.38)),
-    repeating-linear-gradient(0deg,#ece3d5 0,#ece3d5 1px,var(--paper) 1px,var(--paper) 4px);
+    radial-gradient(circle at top, rgba(255,255,255,.035), transparent 28%),
+    var(--bg);
+  color:var(--text);
+  font-family:Georgia, "Times New Roman", serif;
 }
 
 .wrap {
@@ -41,7 +41,7 @@ body {
   position:sticky;
   top:0;
   z-index:20;
-  background:rgba(243,237,226,.96);
+  background:rgba(16,16,16,.96);
   border-bottom:1px solid var(--line);
   backdrop-filter:blur(9px);
 }
@@ -68,7 +68,6 @@ body {
   width:45%;
 }
 
-/* PayPal custom elements need an actual width or they can collapse on mobile */
 paypal-cart-button,
 paypal-add-to-cart-button {
   display:block !important;
@@ -142,14 +141,14 @@ paypal-add-to-cart-button {
 
 .product {
   overflow:hidden;
-  background:rgba(255,255,255,.52);
+  background:linear-gradient(180deg,var(--panel2),var(--panel));
   border:1px solid var(--line);
-  border-radius:4px;
-  box-shadow:0 16px 36px var(--shadow);
+  border-radius:10px;
+  box-shadow:0 16px 38px rgba(0,0,0,.28);
 }
 
 .product-image {
-  background:#d9cdbd;
+  background:#171717;
   border-bottom:1px solid var(--line);
 }
 
@@ -187,14 +186,14 @@ paypal-add-to-cart-button {
 
 .desc {
   margin:15px 0 0;
-  color:#4f4740;
+  color:#ddd5cc;
   line-height:1.6;
   font-size:.98rem;
 }
 
 .fine {
   margin:13px 0 0;
-  color:var(--muted);
+  color:#928a82;
   font-size:.83rem;
   line-height:1.45;
   font-style:italic;
@@ -205,7 +204,7 @@ paypal-add-to-cart-button {
   min-width:0;
   margin-top:20px;
   padding-top:18px;
-  border-top:1px solid #d9cdbc;
+  border-top:1px solid var(--line);
   overflow:visible;
 }
 
@@ -214,7 +213,8 @@ paypal-add-to-cart-button {
   padding:24px 22px;
   text-align:center;
   border:1px solid var(--line);
-  background:rgba(255,255,255,.32);
+  background:#171614;
+  border-radius:8px;
 }
 
 .about p {
@@ -230,18 +230,16 @@ footer {
   padding:28px 14px 44px;
   text-align:center;
   border-top:1px solid var(--line);
-  color:var(--muted);
+  color:#8d857d;
   font-size:.84rem;
 }
 
-/* Normal large-screen layout */
 @media (min-width:960px) and (hover:hover) {
   .products {
     grid-template-columns:repeat(2, minmax(0,1fr));
   }
 }
 
-/* Force phones/tablets to one column even when browser "Desktop site" is enabled */
 @media (hover:none) and (pointer:coarse) {
   .products {
     grid-template-columns:1fr !important;
@@ -255,7 +253,6 @@ footer {
   }
 }
 
-/* Extra narrow devices */
 @media (max-width:480px) {
   .brand-mini {
     font-size:.76rem;
