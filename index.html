@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#101010">
+<meta name="theme-color" content="#000000">
 <meta name="description" content="Irreverent Works — peculiar paperwork, ceremonial nonsense, and goods of dubious spiritual and practical value.">
 <title>Irreverent Works</title>
 
@@ -11,23 +11,20 @@
 
 <style>
 :root {
-  --bg:#101010;
-  --panel:#1d1b18;
-  --panel2:#24211d;
-  --text:#f3eee5;
-  --muted:#b9afa4;
-  --line:#3a342d;
-  --gold:#b58a35;
-  --red:#b44942;
+  --bg:#000000;
+  --panel:#111111;
+  --panel2:#171717;
+  --text:#f5f5f5;
+  --muted:#b7b7b7;
+  --line:#2b2b2b;
+  --accent:#9e1f1f;
 }
 
 * { box-sizing:border-box; }
 html { -webkit-text-size-adjust:100%; }
 body {
   margin:0;
-  background:
-    radial-gradient(circle at top, rgba(255,255,255,.035), transparent 28%),
-    var(--bg);
+  background:var(--bg);
   color:var(--text);
   font-family:Georgia, "Times New Roman", serif;
 }
@@ -41,7 +38,7 @@ body {
   position:sticky;
   top:0;
   z-index:20;
-  background:rgba(16,16,16,.96);
+  background:rgba(0,0,0,.96);
   border-bottom:1px solid var(--line);
   backdrop-filter:blur(9px);
 }
@@ -60,6 +57,7 @@ body {
   text-transform:uppercase;
   letter-spacing:.12em;
   white-space:nowrap;
+  color:#ffffff;
 }
 
 .cart-host {
@@ -79,11 +77,12 @@ paypal-add-to-cart-button {
   padding:52px 14px 42px;
   text-align:center;
   border-bottom:1px solid var(--line);
+  background:#050505;
 }
 
 .kicker {
   margin:0 0 10px;
-  color:var(--gold);
+  color:#cfcfcf;
   font-size:.76rem;
   font-weight:700;
   letter-spacing:.2em;
@@ -96,12 +95,13 @@ paypal-add-to-cart-button {
   font-size:clamp(3rem, 13vw, 6rem);
   line-height:.96;
   letter-spacing:-.04em;
+  color:#ffffff;
 }
 
 .rule {
   width:72px;
-  height:1px;
-  background:var(--gold);
+  height:2px;
+  background:var(--accent);
   margin:22px auto 18px;
 }
 
@@ -125,11 +125,12 @@ paypal-add-to-cart-button {
   margin:0;
   font-size:1.8rem;
   font-weight:500;
+  color:#ffffff;
 }
 
 .shop-head p {
   margin:6px 0 0;
-  color:var(--muted);
+  color:#9f9f9f;
   font-size:.92rem;
 }
 
@@ -144,11 +145,11 @@ paypal-add-to-cart-button {
   background:linear-gradient(180deg,var(--panel2),var(--panel));
   border:1px solid var(--line);
   border-radius:10px;
-  box-shadow:0 16px 38px rgba(0,0,0,.28);
+  box-shadow:0 16px 38px rgba(0,0,0,.55);
 }
 
 .product-image {
-  background:#171717;
+  background:#000;
   border-bottom:1px solid var(--line);
 }
 
@@ -175,25 +176,26 @@ paypal-add-to-cart-button {
   font-size:1.55rem;
   line-height:1.15;
   font-weight:500;
+  color:#ffffff;
 }
 
 .price {
   flex:0 0 auto;
-  color:var(--red);
+  color:#d14b4b;
   font-size:1.3rem;
   font-weight:700;
 }
 
 .desc {
   margin:15px 0 0;
-  color:#ddd5cc;
+  color:#dddddd;
   line-height:1.6;
   font-size:.98rem;
 }
 
 .fine {
   margin:13px 0 0;
-  color:#928a82;
+  color:#8f8f8f;
   font-size:.83rem;
   line-height:1.45;
   font-style:italic;
@@ -213,24 +215,24 @@ paypal-add-to-cart-button {
   padding:24px 22px;
   text-align:center;
   border:1px solid var(--line);
-  background:#171614;
+  background:#0a0a0a;
   border-radius:8px;
 }
 
 .about p {
   max-width:720px;
   margin:0 auto;
-  color:var(--muted);
+  color:#a9a9a9;
   line-height:1.65;
 }
 
-.about strong { color:var(--gold); }
+.about strong { color:#ffffff; }
 
 footer {
   padding:28px 14px 44px;
   text-align:center;
   border-top:1px solid var(--line);
-  color:#8d857d;
+  color:#777777;
   font-size:.84rem;
 }
 
